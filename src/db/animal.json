@@ -4,31 +4,36 @@
             "name": "Whiskers",
             "image_url": "db_cat_1.png",
             "gender": "Female",
-            "age": 2
+            "age": 2,
+            "type": "Cat"
         },
         {
             "name": "Alley",
             "image_url": "db_cat_2.png",
             "gender": "Male",
-            "age": 3
+            "age": 3,
+            "type": "Cat"
         },
         {
             "name": "Mittens",
             "image_url": "db_cat_3.png",
             "gender": "Female",
-            "age": 1
+            "age": 1,
+            "type": "Cat"
         },
         {
             "name": "Shadow",
             "image_url": "db_cat_4.png",
             "gender": "Male",
-            "age": 4
+            "age": 4,
+            "type": "Cat"
         },
         {
             "name": "Paws",
             "image_url": "db_cat_5.png",
             "gender": "Female",
-            "age": 3
+            "age": 3,
+            "type": "Cat"
         }
     ],
     "dogs": [
@@ -36,31 +41,36 @@
             "name": "Buddy",
             "image_url": "db_dog_1.jpg",
             "gender": "Male",
-            "age": 5
+            "age": 5,
+            "type": "Dog"
         },
         {
             "name": "Rocky",
             "image_url": "db_dog_2.png",
             "gender": "Male",
-            "age": 2
+            "age": 2,
+            "type": "Dog"
         },
         {
             "name": "Jack",
             "image_url": "db_dog_3.png",
             "gender": "Male",
-            "age": 3
+            "age": 3,
+            "type": "Dog"
         },
         {
             "name": "Max",
             "image_url": "db_dog_4.png",
             "gender": "Male",
-            "age": 4
+            "age": 4,
+            "type": "Dog"
         },
         {
             "name": "Bear",
             "image_url": "db_dog_5.png",
             "gender": "Male",
-            "age": 6
+            "age": 6,
+            "type": "Dog"
         }
     ],
     "hamsters": [
@@ -68,31 +78,36 @@
             "name": "Nibbles",
             "image_url": "db_hamster_1.png",
             "gender": "Female",
-            "age": 1
+            "age": 1,
+            "type": "Hamster"
         },
         {
             "name": "Tiny",
             "image_url": "db_hamster_2.png",
             "gender": "Male",
-            "age": 1
+            "age": 1,
+            "type": "Hamster"
         },
         {
             "name": "Squeak",
             "image_url": "db_hamster_3.png",
             "gender": "Female",
-            "age": 1
+            "age": 1,
+            "type": "Hamster"
         },
         {
             "name": "Pumpkin",
             "image_url": "db_hamster_4.png",
             "gender": "Female",
-            "age": 1
+            "age": 1,
+            "type": "Hamster"
         },
         {
             "name": "Fuzzy",
             "image_url": "db_hamster_5.png",
             "gender": "Male",
-            "age": 1
+            "age": 1,
+            "type": "Hamster"
         }
     ],
     "rabbits": [
@@ -100,31 +115,36 @@
             "name": "Thumper",
             "image_url": "db_rabbit_1.png",
             "gender": "Male",
-            "age": 2
+            "age": 2,
+            "type": "Rabbit"
         },
         {
             "name": "BunBun",
             "image_url": "db_rabbit_2.png",
             "gender": "Female",
-            "age": 3
+            "age": 3,
+            "type": "Rabbit"
         },
         {
             "name": "Coco",
             "image_url": "db_rabbit_3.png",
             "gender": "Female",
-            "age": 4
+            "age": 4,
+            "type": "Rabbit"
         },
         {
             "name": "Peanut",
             "image_url": "db_rabbit_4.png",
             "gender": "Male",
-            "age": 2
+            "age": 2,
+            "type": "Rabbit"
         },
         {
             "name": "Snowball",
             "image_url": "db_rabbit_5.png",
             "gender": "Female",
-            "age": 1
+            "age": 1,
+            "type": "Rabbit"
         }
     ]
 }
