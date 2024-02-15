@@ -39,12 +39,12 @@ const Release = () => {
                     <Row className="mb-3">
                         <Form.Group as={Col} controlId="formGridFirstName">
                             <Form.Label>First Name</Form.Label>
-                            <Form.Control type="text" placeholder="First" />
+                            <Form.Control type="text" placeholder="First Name" />
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="formGridLastName">
                             <Form.Label>Last Name</Form.Label>
-                            <Form.Control type="text" placeholder="Last" />
+                            <Form.Control type="text" placeholder="Last Name" />
                         </Form.Group>
                     </Row>
 
@@ -66,26 +66,23 @@ const Release = () => {
                     <Row className="mb-3">
                         <Form.Group as={Col} controlId="formGridCity">
                             <Form.Label>City</Form.Label>
-                            <Form.Control />
+                            <Form.Control placeholder="City"/>
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="formGridState">
                             <Form.Label>State</Form.Label>
-                            <Form.Select defaultValue="Choose...">
-                                <option>Choose...</option>
-                                {/* Add state options here */}
-                            </Form.Select>
+                            <Form.Control placeholder="State"/>
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="formGridZip">
                             <Form.Label>Postal Code</Form.Label>
-                            <Form.Control />
+                            <Form.Control placeholder="Postal Code"/>
                         </Form.Group>
                     </Row>
 
                     <Form.Group className="mb-3" controlId="formGridReason">
                         <Form.Label>Reason for Releasing</Form.Label>
-                        <Form.Control as="textarea" rows={3} />
+                        <Form.Control as="textarea" rows={3} placeholder="Reason for Releasing"/>
                     </Form.Group>
 
                     <Form.Group className="mb-3" id="formGridCheckbox">
