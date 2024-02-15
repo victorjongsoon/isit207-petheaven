@@ -1,0 +1,28 @@
+.gallery-container {
+    padding: 1rem; /* Adjust padding to your preference */
+    max-width: 1200px; /* Adjust max-width to your preference */
+    margin: auto; /* This will center your gallery */
+}
+
+.animal-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This makes sure the footer of the card aligns at the bottom */
+}
+
+.animal-image {
+    width: 100%; /* This will make sure the image takes full width of the card */
+    height: 200px; /* Adjust height to your preference */
+    object-fit: cover; /* This will make sure the image covers the area, without stretching */
+}
+
+/* If you need additional spacing between cards, you can adjust margins in your Row and Col components */
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.col {
+    padding-left: 15px;
+    padding-right: 15px;
+}
