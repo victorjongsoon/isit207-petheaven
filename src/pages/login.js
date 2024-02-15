@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import Header from './header';
 import { Card, Button, Form, Row, Col, Container, Alert } from 'react-bootstrap';
 import usersData from '../db/user.json';
 import './login.css';
+import { AuthContext } from './auth';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -13,11 +15,14 @@ const Login = () => {
 
     const handleUsernameChange = (e) => setUsername(e.target.value);
     const handlePasswordChange = (e) => setPassword(e.target.value);
+    const { login } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleLogin = (event) => {
         event.preventDefault();
         const user = usersData.users.find((u) => u.username === username && u.password === password);
         if (user) {
+            login(user);
             setLoggedInUser(user.name);
             setLoginSuccess(true);
             setLoginError(false);
@@ -26,6 +31,14 @@ const Login = () => {
             setLoginSuccess(false);
         }
     };
+
+    useEffect(() => {
+        if (loginSuccess) {
+            // Redirect user after 3 seconds
+            const timer = setTimeout(() => navigate('/'), 3000);
+            return () => clearTimeout(timer); // Clean up the timeout on component unmount
+        }
+    }, [loginSuccess, navigate]);
 
     return (
         <div>
@@ -82,7 +95,8 @@ const Login = () => {
 
                                             {loginSuccess && (
                                                 <Alert variant="success" className="mt-3">
-                                                    Welcome {loggedInUser}! Login successful.
+                                                    Welcome {loggedInUser}! Login successful. <br></br>
+                                                    Redirecting to Homepage.
                                                 </Alert>
                                             )}
 
