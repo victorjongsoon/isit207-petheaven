@@ -1,5 +1,5 @@
 .background-image-section {
-    background-image: url('../img/dog-background.jpeg'); /* Update with your image path */
+    background-image: url('../../public/img/dog-background.jpeg'); 
     background-size: cover;
     background-position: center;
     height: 500px; /* Adjust as needed */

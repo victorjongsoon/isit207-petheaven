@@ -2,8 +2,9 @@ import React from 'react';
 import { Accordion } from 'react-bootstrap';
 import Header from './header'; 
 import './home.css';
-import dogImage from '../img/dog_1.jpg';
 import { Button } from 'react-bootstrap';
+
+const imagePath = process.env.PUBLIC_URL + '/img/';
 
 const Home = () => {
     return (
@@ -19,7 +20,7 @@ const Home = () => {
                     <Button variant="primary">Adoption Gallery</Button>
                 </div>
                 <div className="image-content">
-                    <img src={dogImage} alt="Adoptable Pet" />
+                    <img src={imagePath + "dog_1.jpg"} alt="Adoptable Pet" />
                 </div>
             </div>
 

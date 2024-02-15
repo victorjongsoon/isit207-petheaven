@@ -1,0 +1,130 @@
+{
+    "cats": [
+        {
+            "name": "Whiskers",
+            "image_url": "db_cat_1.png",
+            "gender": "Female",
+            "age": 2
+        },
+        {
+            "name": "Alley",
+            "image_url": "db_cat_2.png",
+            "gender": "Male",
+            "age": 3
+        },
+        {
+            "name": "Mittens",
+            "image_url": "db_cat_3.png",
+            "gender": "Female",
+            "age": 1
+        },
+        {
+            "name": "Shadow",
+            "image_url": "db_cat_4.png",
+            "gender": "Male",
+            "age": 4
+        },
+        {
+            "name": "Paws",
+            "image_url": "db_cat_5.png",
+            "gender": "Female",
+            "age": 3
+        }
+    ],
+    "dogs": [
+        {
+            "name": "Buddy",
+            "image_url": "db_dog_1.jpg",
+            "gender": "Male",
+            "age": 5
+        },
+        {
+            "name": "Rocky",
+            "image_url": "db_dog_2.png",
+            "gender": "Male",
+            "age": 2
+        },
+        {
+            "name": "Jack",
+            "image_url": "db_dog_3.png",
+            "gender": "Male",
+            "age": 3
+        },
+        {
+            "name": "Max",
+            "image_url": "db_dog_4.png",
+            "gender": "Male",
+            "age": 4
+        },
+        {
+            "name": "Bear",
+            "image_url": "db_dog_5.png",
+            "gender": "Male",
+            "age": 6
+        }
+    ],
+    "hamsters": [
+        {
+            "name": "Nibbles",
+            "image_url": "db_hamster_1.png",
+            "gender": "Female",
+            "age": 1
+        },
+        {
+            "name": "Tiny",
+            "image_url": "db_hamster_2.png",
+            "gender": "Male",
+            "age": 1
+        },
+        {
+            "name": "Squeak",
+            "image_url": "db_hamster_3.png",
+            "gender": "Female",
+            "age": 1
+        },
+        {
+            "name": "Pumpkin",
+            "image_url": "db_hamster_4.png",
+            "gender": "Female",
+            "age": 1
+        },
+        {
+            "name": "Fuzzy",
+            "image_url": "db_hamster_5.png",
+            "gender": "Male",
+            "age": 1
+        }
+    ],
+    "rabbits": [
+        {
+            "name": "Thumper",
+            "image_url": "db_rabbit_1.png",
+            "gender": "Male",
+            "age": 2
+        },
+        {
+            "name": "BunBun",
+            "image_url": "db_rabbit_2.png",
+            "gender": "Female",
+            "age": 3
+        },
+        {
+            "name": "Coco",
+            "image_url": "db_rabbit_3.png",
+            "gender": "Female",
+            "age": 4
+        },
+        {
+            "name": "Peanut",
+            "image_url": "db_rabbit_4.png",
+            "gender": "Male",
+            "age": 2
+        },
+        {
+            "name": "Snowball",
+            "image_url": "db_rabbit_5.png",
+            "gender": "Female",
+            "age": 1
+        }
+    ]
+}
