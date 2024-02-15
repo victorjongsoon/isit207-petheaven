@@ -61,7 +61,7 @@ const Login = () => {
                                                 <Form.Group className="mb-4" controlId="formBasicEmail">
                                                     <Form.Control
                                                         type="text"
-                                                        placeholder="username"
+                                                        placeholder="Username"
                                                         onChange={handleUsernameChange}
                                                         isInvalid={loginError}
                                                     />
@@ -95,8 +95,7 @@ const Login = () => {
 
                                             {loginSuccess && (
                                                 <Alert variant="success" className="mt-3">
-                                                    Welcome {loggedInUser}! Login successful. <br></br>
-                                                    Redirecting to Homepage.
+                                                    Welcome {loggedInUser}! Redirecting to Homepage.
                                                 </Alert>
                                             )}
 
