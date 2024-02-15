@@ -1,6 +1,6 @@
 import React from 'react';
 import { Accordion } from 'react-bootstrap';
-import Header from './header'; 
+import Header from './header';
 import './home.css';
 import { Button } from 'react-bootstrap';
 
@@ -26,36 +26,36 @@ const Home = () => {
 
             {/* Accordion section */}
             <div className="accordion-container">
-              <Accordion>
-                  <Accordion.Item eventKey="0">
-                      <Accordion.Header>How to Adopt</Accordion.Header>
-                      <Accordion.Body>
-                          {/* Content for How to Adopt */}
-                          Step 1: Browse our adoption gallery ...
-                      </Accordion.Body>
-                  </Accordion.Item>
-                  <Accordion.Item eventKey="1">
-                      <Accordion.Header>Things To Note</Accordion.Header>
-                      <Accordion.Body>
-                          {/* Content for Things To Note */}
-                          Due to the high volume of adoption requests ...
-                      </Accordion.Body>
-                  </Accordion.Item>
-                  <Accordion.Item eventKey="2">
-                      <Accordion.Header>Adoption Fees</Accordion.Header>
-                      <Accordion.Body>
-                          {/* Content for Things To Note */}
-                          Adoption Fee...
-                      </Accordion.Body>
-                  </Accordion.Item>
-                  <Accordion.Item eventKey="3">
-                      <Accordion.Header>FAQ</Accordion.Header>
-                      <Accordion.Body>
-                          {/* Content for Things To Note */}
-                          FAQ...
-                      </Accordion.Body>
-                  </Accordion.Item>
-              </Accordion>
+                <Accordion>
+                    <Accordion.Item eventKey="0">
+                        <Accordion.Header>How to Adopt</Accordion.Header>
+                        <Accordion.Body>
+                            {/* Content for How to Adopt */}
+                            Step 1: Browse our adoption gallery ...
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="1">
+                        <Accordion.Header>Things To Note</Accordion.Header>
+                        <Accordion.Body>
+                            {/* Content for Things To Note */}
+                            Due to the high volume of adoption requests ...
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="2">
+                        <Accordion.Header>Adoption Fees</Accordion.Header>
+                        <Accordion.Body>
+                            {/* Content for Things To Note */}
+                            Adoption Fee...
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="3">
+                        <Accordion.Header>FAQ</Accordion.Header>
+                        <Accordion.Body>
+                            {/* Content for Things To Note */}
+                            FAQ...
+                        </Accordion.Body>
+                    </Accordion.Item>
+                </Accordion>
             </div>
         </div>
     );

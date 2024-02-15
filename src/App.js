@@ -7,6 +7,7 @@ import Release from './pages/release';
 import Login from './pages/login';
 import Register from './pages/register';
 import Footer from './pages/footer';
+import Pet from './pages/pet'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/release" element={<Release />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/pet/:animalId" element={<Pet />} />
           {/* Define other routes here */}
         </Routes>
         </div>

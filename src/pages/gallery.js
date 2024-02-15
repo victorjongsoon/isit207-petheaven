@@ -9,6 +9,7 @@ import animals from '../db/animal.json';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import './gallery.css';
 import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const imagePath = process.env.PUBLIC_URL + '/img/';
 
@@ -18,11 +19,11 @@ const AdoptionGallery = () => {
     const [age, setAge] = useState('All');
     const [gender, setGender] = useState('All');
     const location = useLocation();
-  
+
     // Extract the search query parameter from the URL
     const searchParams = new URLSearchParams(location.search);
     const searchQueryFromURL = searchParams.get('search') || '';
-  
+
     // Set the search input state based on the URL parameter
     useEffect(() => {
         // If there's a search query in the URL, use it to filter the animals
@@ -39,7 +40,7 @@ const AdoptionGallery = () => {
         const value = event.target.value;
         setSearchQuery(value.toLowerCase());
     };
-    
+
 
     const getAgeCategory = (age) => {
         if (age >= 1 && age <= 2) {
@@ -61,7 +62,7 @@ const AdoptionGallery = () => {
             (searchQuery === '' || animal.name.toLowerCase().includes(searchQuery))
         );
     });
-    
+
 
     return (
         <div>
@@ -106,7 +107,9 @@ const AdoptionGallery = () => {
                     {filteredAnimals.map((animal, idx) => (
                         <Col key={idx}>
                             <Card className="animal-card">
-                                <Card.Img variant="top" src={imagePath + animal.image_url} />
+                                <Link to={`/pet/${animal.id}`}>
+                                    <Card.Img variant="top" src={imagePath + animal.image_url} />
+                                </Link>
                                 <Card.Body>
                                     <Card.Title>{animal.name}</Card.Title>
                                     <Card.Text>
