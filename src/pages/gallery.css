@@ -75,3 +75,20 @@
     margin: auto;
     /* This will center your gallery */
 }
+
+/* This will change the cursor to a pointer when hovering over the image, indicating it's clickable */
+.card-img-top:hover {
+    cursor: pointer;
+    opacity: 0.9; /* Slightly fade the image to indicate interactivity */
+}
+
+/* Add a scale transform on hover to give a subtle lift effect */
+.card-img-top:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Ensure the image returns to normal when not hovered */
+.card-img-top {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
