@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './header';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
@@ -8,6 +8,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import animals from '../db/animal.json';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import './gallery.css';
+import { useLocation } from 'react-router-dom';
 
 const imagePath = process.env.PUBLIC_URL + '/img/';
 
@@ -16,11 +17,29 @@ const AdoptionGallery = () => {
     const [category, setCategory] = useState('All');
     const [age, setAge] = useState('All');
     const [gender, setGender] = useState('All');
+    const location = useLocation();
+  
+    // Extract the search query parameter from the URL
+    const searchParams = new URLSearchParams(location.search);
+    const searchQueryFromURL = searchParams.get('search') || '';
+  
+    // Set the search input state based on the URL parameter
+    useEffect(() => {
+        // If there's a search query in the URL, use it to filter the animals
+        if (searchQueryFromURL) {
+            setSearchQuery(searchQueryFromURL.toLowerCase());
+        } else {
+            // If the search query in the URL is empty, reset the search query state
+            setSearchQuery('');
+        }
+    }, [searchQueryFromURL]);
 
     // Handlers for search and filter
     const handleSearchChange = (event) => {
-        setSearchQuery(event.target.value.toLowerCase());
+        const value = event.target.value;
+        setSearchQuery(value.toLowerCase());
     };
+    
 
     const getAgeCategory = (age) => {
         if (age >= 1 && age <= 2) {
@@ -36,12 +55,13 @@ const AdoptionGallery = () => {
     const filteredAnimals = Object.values(animals).flat().filter(animal => {
         const animalAgeCategory = getAgeCategory(animal.age);
         return (
-            (category === 'All' || animal.type === category) &&
+            (category === 'All' || animal.type.toLowerCase() === category.toLowerCase()) &&
             (age === 'All' || animalAgeCategory === age) &&
-            (gender === 'All' || animal.gender === gender) &&
-            animal.name.toLowerCase().includes(searchQuery)
+            (gender === 'All' || animal.gender.toLowerCase() === gender.toLowerCase()) &&
+            (searchQuery === '' || animal.name.toLowerCase().includes(searchQuery))
         );
     });
+    
 
     return (
         <div>
@@ -55,6 +75,7 @@ const AdoptionGallery = () => {
                         className="me-2"
                         aria-label="Search"
                         onChange={handleSearchChange}
+                        value={searchQuery}
                     />
                     <Dropdown onSelect={setCategory}>
                         <Dropdown.Toggle variant="success" id="dropdown-basic">

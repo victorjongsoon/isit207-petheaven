@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Navbar, Nav, Form, FormControl, Button, Container } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const NavBar = () => {
+  const [searchInput, setSearchInput] = useState('');
+  const navigate = useNavigate();
+
+  const handleSearchChange = (event) => {
+    setSearchInput(event.target.value);
+  };
+
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+    navigate(`/gallery?search=${encodeURIComponent(searchInput)}`);
+  };
+
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
@@ -16,14 +28,16 @@ const NavBar = () => {
             <Nav.Link as={NavLink} to="/login">Login</Nav.Link>
             <Nav.Link as={NavLink} to="/register">Register</Nav.Link>
           </Nav>
-          <Form className="d-flex">
+          <Form className="d-flex" onSubmit={handleSearchSubmit}>
             <FormControl
               type="search"
               placeholder="Search"
               className="me-2"
               aria-label="Search"
+              onChange={handleSearchChange}
+              value={searchInput}
             />
-            <Button variant="primary">Search</Button>
+            <Button variant="primary" type="submit">Search</Button>
           </Form>
         </Navbar.Collapse>
       </Container>
