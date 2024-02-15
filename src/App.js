@@ -10,7 +10,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/isit207-petheaven">
       <div className="App">
         <NavBar />
         <Routes>
