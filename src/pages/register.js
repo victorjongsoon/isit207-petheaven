@@ -76,7 +76,7 @@ const Register = () => {
                                                 </Form.Group>
 
                                                 <div className="text-center">
-                                                    <Button variant="outline-primary" type="submit">Register</Button>
+                                                    <Button variant="outline-dark" type="submit">Register</Button>
                                                 </div>
                                             </Form>
 
@@ -95,7 +95,7 @@ const Register = () => {
                                         </Card.Body>
                                     </Col>
                                     <Col lg={6} className="d-flex align-items-center gradient-custom-2">
-                                        <div className="text-white px-3 py-4 p-md-5 mx-md-4">
+                                        <div className="text-black px-3 py-4 p-md-5 mx-md-4">
                                             <h4 className="mb-4">Why Join Pet Heaven?</h4>
                                             <p className="small mb-0">
                                                 By joining Pet Heaven, you're taking a step towards giving a loving home to a pet in need. Our platform connects you with pets looking for their forever home.

@@ -40,6 +40,10 @@ const Login = () => {
         }
     }, [loginSuccess, navigate]);
 
+    const redirectToRegister = () => {
+        navigate('/register'); // Path to your register page
+    };    
+
     return (
         <div>
             <Header title="Login" subtitle="Join Pet Heaven and start your adoption journey today." />
@@ -105,7 +109,7 @@ const Login = () => {
 
                                             <div className="d-flex align-items-center justify-content-center pb-4">
                                                 <p className="mb-0 me-2">Don't have an account?</p>
-                                                <Button variant="outline-dark">Create new</Button>
+                                                <Button variant="outline-dark" onClick={redirectToRegister}>Create new</Button>
                                             </div>
                                         </Card.Body>
                                     </Col>
