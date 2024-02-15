@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './header';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
+import Modal from 'react-bootstrap/Modal';
 import "./release.css";
 
 const Release = () => {
+    const [showModal, setShowModal] = useState(false);
+
+    const handleClose = () => setShowModal(false);
+    const handleShow = () => setShowModal(true);
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        // Handle your form submission logic here, then show the modal
+        handleShow();
+    };
     return (
         <div>
             <Header title="Release" subtitle="Ensure Your Pet's Future Happiness" />
@@ -81,11 +92,23 @@ const Release = () => {
                         <Form.Check type="checkbox" label="By submitting you declare that all information entered are accurate." />
                     </Form.Group>
 
-                    <Button variant="primary" type="submit">
+                    <Button variant="primary" type="submit" onClick={handleSubmit}>
                         Submit
                     </Button>
                 </Form>
             </div>
+            {/* Modal */}
+            <Modal show={showModal} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Thank You!</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>Your submission has been received.</Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Close
+                    </Button>
+                </Modal.Footer>
+            </Modal>
         </div>
     );
 };
