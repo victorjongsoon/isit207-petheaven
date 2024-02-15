@@ -3,10 +3,16 @@ import { Accordion } from 'react-bootstrap';
 import Header from './header';
 import './home.css';
 import { Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 const imagePath = process.env.PUBLIC_URL + '/img/';
 
 const Home = () => {
+    const navigate = useNavigate();
+
+    const goToGallery = () => {
+        navigate('/gallery'); // The path you want to navigate to
+    };
     return (
         <div>
             {/* Background image section */}
@@ -17,7 +23,7 @@ const Home = () => {
                 <div className="text-content">
                     <h2>Adoption Gallery</h2>
                     <p>Thank you for your interest in adopting an animal! All visits are now by appointment only and slots will only be released 7 days beforehand. Book an appointment.</p>
-                    <Button variant="primary">Adoption Gallery</Button>
+                    <Button variant="primary" onClick={goToGallery}>Adoption Gallery</Button>
                 </div>
                 <div className="image-content">
                     <img src={imagePath + "dog_1.jpg"} alt="Adoptable Pet" />
