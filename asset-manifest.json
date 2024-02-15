@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/isit207-petheaven/static/css/main.c565b406.css",
-    "main.js": "/isit207-petheaven/static/js/main.719000d5.js",
+    "main.css": "/isit207-petheaven/static/css/main.392e597d.css",
+    "main.js": "/isit207-petheaven/static/js/main.6180586d.js",
     "static/js/592.4206e5cc.chunk.js": "/isit207-petheaven/static/js/592.4206e5cc.chunk.js",
     "static/media/dog-background.jpeg": "/isit207-petheaven/static/media/dog-background.9dc96f2b13f81be82f8e.jpeg",
     "index.html": "/isit207-petheaven/index.html",
-    "main.c565b406.css.map": "/isit207-petheaven/static/css/main.c565b406.css.map",
-    "main.719000d5.js.map": "/isit207-petheaven/static/js/main.719000d5.js.map",
+    "main.392e597d.css.map": "/isit207-petheaven/static/css/main.392e597d.css.map",
+    "main.6180586d.js.map": "/isit207-petheaven/static/js/main.6180586d.js.map",
     "592.4206e5cc.chunk.js.map": "/isit207-petheaven/static/js/592.4206e5cc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c565b406.css",
-    "static/js/main.719000d5.js"
+    "static/css/main.392e597d.css",
+    "static/js/main.6180586d.js"
   ]
 }
