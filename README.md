@@ -1,4 +1,4 @@
-# Getting Started with Create React App | [Live Site](https://victorjongsoon.github.io/isit207-petheaven/)
+# Pet Heaven (React App) | [Live Site](https://victorjongsoon.github.io/isit207-petheaven/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
