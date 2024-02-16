@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Pages and Features
+
+### Home Page & Adoption Gallery Page
+
+![homepage](./img/home-gallery.png)
+
+The home page serves as the landing page of our platform, featuring a warm welcome and a brief introduction to our mission. Users are greeted with an engaging header, "Adopting a pet can change both your worlds," setting the tone for a compassionate adoption journey.
+
 ## Available Scripts
 
 In the project directory, you can run:
