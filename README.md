@@ -1,16 +1,34 @@
 # Pet Heaven (React App) | [Live Site](https://victorjongsoon.github.io/isit207-petheaven/)
 
+## Screenshots
+![homepage-gallery](./img/home-gallery.png)
+![search-bar](./img/search-bar.png)
+![filtering-options](./img/filtering-options.png)
+![pet](./img/pet.png)
+![register](./img/register.png)
+![release](./img/release.png)
+![release-form-validation](./img/release-form-validation.png)
+![login](./img/login.png)
+![login-credentials](./img/login-credential.png)
+![ipad-iphone](./img/ipad-iphone.png)
+
+## Usages
+1. HTML
+2. CSS
+3. JavaScript
+
+## Credits
+1. [Canva](https://www.canva.com/) - Person potraits, Blog images are downloaded from Canva
+2. [Bootstrap](https://react-bootstrap.netlify.app/) - Powerful way to build responsive website
+3. Google Images for animal photos
+4. Others - If I did not give you credit, do let me know, I'll update according. Thank you to the open source community.
+
+## Author
+- LinkedIn - [Victor Jong](https://www.linkedin.com/in/victorjongsoon/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Pages and Features
-
-### Home Page & Adoption Gallery Page
-
-![homepage](./img/home-gallery.png)
-
-The home page serves as the landing page of our platform, featuring a warm welcome and a brief introduction to our mission. Users are greeted with an engaging header, "Adopting a pet can change both your worlds," setting the tone for a compassionate adoption journey.
-
-## Available Scripts
+## Installation
 
 In the project directory, you can run:
 
