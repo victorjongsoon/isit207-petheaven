@@ -69,7 +69,7 @@ const AdoptionGallery = () => {
             <Header title="Adoption Gallery" subtitle="Find your new best friend!" />
             <div className='gallery-container'>
                 {/* Search and filter bar */}
-                <Form className="d-flex justify-content-between my-4">
+                <Form className="search-and-filter my-4">
                     <Form.Control
                         type="search"
                         placeholder="Search..."

@@ -94,5 +94,54 @@
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* Search and filter bar styles */
+.search-and-filter {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    gap: 1rem;
+    padding: 0.5rem;
+}
 
+.search-and-filter .form-control {
+    order: -1; /* Ensures search bar is first in line */
+    margin-bottom: 1rem; /* Add space below on smaller screens */
+}
+
+.search-and-filter .dropdown,
+.search-and-filter .bootstrap-select,
+.search-and-filter .dropdown-toggle {
+    flex: 1; /* Each dropdown will take up equal space */
+}
+
+/* Adjustments for larger screens */
+@media screen and (min-width: 600px) {
+    .search-and-filter {
+        flex-direction: row; /* Place elements in a row on larger screens */
+        justify-content: start; /* Align elements to the start of the container */
+        align-items: center; /* Center them vertically */
+        gap: 0.5rem; /* Adjust gap as needed */
+    }
+
+    .search-and-filter .form-control {
+        margin-bottom: 0; /* Remove space below on larger screens */
+        flex: 1; /* Allow search bar to take available space */
+    }
+
+    .search-and-filter .dropdown,
+    .search-and-filter .bootstrap-select,
+    .search-and-filter .dropdown-toggle {
+        width: auto; /* Allow dropdowns to manage their width */
+        flex: 0 1 auto; /* Do not grow, allow shrink, based on content */
+    }
+}
+
+/* Ensure dropdown menus have the same width as their toggles */
+.dropdown-menu {
+    width: 100%;
+}
+
+/* Ensure all dropdown toggles are the same width */
+.search-and-filter .dropdown-toggle {
+    width: 100%;
+}
 
