@@ -16,6 +16,7 @@
 1. HTML
 2. CSS
 3. JavaScript
+4. React Js
 
 ## Credits
 1. [Canva](https://www.canva.com/) - Person potraits, Blog images are downloaded from Canva
