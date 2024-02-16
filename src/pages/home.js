@@ -34,13 +34,26 @@ const Home = () => {
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>How to Adopt</Accordion.Header>
                         <Accordion.Body>
-                            Adopting a pet from our shelter is a fulfilling experience. Start by browsing through our online gallery. When you find a pet you are interested in, submit an adoption application form. Our team will then get in touch with you to discuss the next steps, including a meet-and-greet session.
+                            <ol>
+                                <li>Browse Our Pets: Explore our online gallery to find your new furry friend.</li>
+                                <li>Apply to Adopt: Submit your adoption form online. We'll contact you to discuss.</li>
+                                <li>Visit and Adopt: Meet your pet at our shelter and complete the adoption process.</li>
+                                <address className="shelter-address">
+                                    <strong>Pet Heaven Shelter:</strong><br />
+                                    123 Bukit Timah Road<br />
+                                    Singapore, 588172
+                                </address>
+                            </ol>
                         </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="1">
                         <Accordion.Header>Things To Note</Accordion.Header>
                         <Accordion.Body>
-                            When adopting a pet, consider that it's a lifelong commitment. Make sure your lifestyle and household are prepared for a new furry friend. Remember that pets require your time, attention, and love in addition to the financial responsibility.
+                            <ul>
+                                <li>Check our gallery regularly as pets are adopted on a first-come, first-served basis.</li>
+                                <li>We conduct interviews to ensure suitable homes for our pets.</li>
+                                <li>Contact us for post-adoption support as you welcome your new pet.</li>
+                            </ul>
                         </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="2">
@@ -52,7 +65,16 @@ const Home = () => {
                     <Accordion.Item eventKey="3">
                         <Accordion.Header>FAQ</Accordion.Header>
                         <Accordion.Body>
-                            Our FAQ section provides answers to common questions about the adoption process, pet care, and how you can get involved with our shelter. Whether you're a first-time pet owner or looking to add to your pet family, we're here to support you.
+                            <dl>
+                                <dt>How can I prepare for my new pet?</dt>
+                                <dd>Ensure your home is ready and consider the commitment needed.</dd>
+                                <dt>What are the shelter's visiting hours?</dt>
+                                <dd>Open from 10:00 am to 6:00 pm, Monday through Saturday. Visits by appointment only.</dd>
+                                <dt>Can I volunteer at Pet Heaven Shelter?</dt>
+                                <dd>Yes! Visit our 'Volunteer' section or contact us for more information on contributing.</dd>
+                                <dt>Can I adopt if I don’t see the breed I want?</dt>
+                                <dd>Keep an eye on our gallery for new available pets.</dd>
+                            </dl>
                         </Accordion.Body>
                     </Accordion.Item>
                 </Accordion>

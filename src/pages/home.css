@@ -107,3 +107,11 @@
     color: black;
     /* Text color for the content */
 }
+
+.shelter-address {
+    margin-top: 10px; /* Adjust as needed */
+    padding: 10px;
+    border-left: 3px solid #007bff; /* Thematic left border */
+    font-style: normal; /* Addresses are italic by default */
+  }
+  
