@@ -11,6 +11,7 @@
 ![login](./img/login.png)
 ![login-credentials](./img/login-credential.png)
 ![ipad-iphone](./img/ipad-iphone.png)
+![register-validation](./img/register-validation.png)
 
 ## Usages
 1. HTML
