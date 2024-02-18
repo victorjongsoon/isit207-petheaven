@@ -1,29 +1,41 @@
 import React, { useState } from 'react';
 import Header from './header';
 import { Card, Button, Form, Row, Col, Container, Alert } from 'react-bootstrap';
-import './register.css'; 
+import './register.css';
 import { useNavigate } from 'react-router-dom';
+import usersData from '../db/user.json';
 
 const Register = () => {
-    const [password] = useState('');
-    const [confirmPassword] = useState('');
-    const [registerError, setRegisterError] = useState(false);
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+    const [registerError, setRegisterError] = useState('');
     const [registerSuccess, setRegisterSuccess] = useState(false);
     const navigate = useNavigate();
 
+    const isUsernameTaken = (newUsername) => {
+        return usersData.users.some((user) => user.username === newUsername);
+    };
+
     const handleRegister = (event) => {
         event.preventDefault();
+        // No need to check form validity here, since you're doing custom validation
         if (password !== confirmPassword) {
-            setRegisterError(true);
+            setRegisterError('Passwords do not match.');
+            setRegisterSuccess(false);
+        } else if (isUsernameTaken(username)) {
+            setRegisterError('Username is already in use, please use a different username.');
             setRegisterSuccess(false);
         } else {
             // Assuming registration success
             setRegisterSuccess(true);
-            setRegisterError(false);
+            setRegisterError('');
+            // Add the new user to the users array or database here
             // Redirect user after successful registration
             setTimeout(() => navigate('/login'), 3000);
         }
     };
+    
 
     return (
         <div>
@@ -40,7 +52,7 @@ const Register = () => {
                                                 <h4 className="mt-1 mb-5 pb-1">Join Pet Heaven</h4>
                                             </div>
 
-                                            <Form onSubmit={handleRegister}>
+                                            <Form noValidate validated={registerSuccess} onSubmit={handleRegister}>
                                                 <p>Create your account</p>
 
                                                 <Form.Group className="mb-4" controlId="formBasicName">
@@ -56,6 +68,7 @@ const Register = () => {
                                                         type="text"
                                                         placeholder="Username"
                                                         required
+                                                        onChange={(e) => setUsername(e.target.value)}
                                                     />
                                                 </Form.Group>
 
@@ -64,6 +77,7 @@ const Register = () => {
                                                         type="password"
                                                         placeholder="Password"
                                                         required
+                                                        onChange={(e) => setPassword(e.target.value)}
                                                     />
                                                 </Form.Group>
 
@@ -72,6 +86,7 @@ const Register = () => {
                                                         type="password"
                                                         placeholder="Confirm Password"
                                                         required
+                                                        onChange={(e) => setConfirmPassword(e.target.value)}
                                                     />
                                                 </Form.Group>
 
@@ -82,7 +97,7 @@ const Register = () => {
 
                                             {registerError && (
                                                 <Alert variant="danger" className="mt-3">
-                                                    Registration failed: Passwords do not match.
+                                                    {registerError}
                                                 </Alert>
                                             )}
 
